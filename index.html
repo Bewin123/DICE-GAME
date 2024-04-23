@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        background-image: url('dice.gif');
+        /* Specify the path to your background image */
+        background-size: cover;
+        /* This property ensures that the background image covers the entire viewport */
+        background-repeat: no-repeat;
+        /* Prevents the background image from repeating */
+    }
+
+     h1 {
+            color:yellow; /* Setting font color for h1 elements to yellow */
+        }
+</style>
+
+<body>
+    <h1>DICE GAME</h1><br>
+    <h1>LET'S PLAY THE DICE GAME</h1> <!-- Heading added here -->
+    <div class="container">
+        <div class="player" id="player1">
+            <h2>PLAYER 1</h2>
+            <p>SCORE: <span id="player1-score">0</span></p>
+            <button onclick="rollDice('player1')" id="roll-btn1">ROLL DICE</button>
+        </div>
+        <div class="dice-container">
+            <img src="1.png" alt="Dice" id="dice-image">
+        </div>
+        <div class="player" id="player2">
+            <h2>PLAYER 2</h2>
+            <p>SCORE: <span id="player2-score">0</span></p>
+            <button onclick="rollDice('player2')" id="roll-btn2" disabled>ROLL DICE</button>
+        </div>
+    </div>
+
+    <div class="center">
+        <button onclick="resetGame()" id="reset-btn" disabled>RE-SET GAME</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
